@@ -8,3 +8,5 @@ shell:
 	python manage.py shell
 check:
 	python manage.py check
+test:
+	python manage.py test
