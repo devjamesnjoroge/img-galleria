@@ -19,6 +19,10 @@ class Images(models.Model):
     def update_image(self):
         self.objects.update()
 
+    # Copy image to clipboard
+    def copy_image(self):
+        return self.image
+
     @classmethod
     def get_image(cls):
         images = cls.objects.all()

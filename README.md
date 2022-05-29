@@ -38,3 +38,7 @@
 
 - Email: developerjaymmy@gmail.com
 - [LinkedIn](https://www.linkedin.com/in/devjamesnjoroge/)
+
+### LICENSE
+
+[MIT License](LICENSE)
