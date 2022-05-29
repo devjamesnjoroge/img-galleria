@@ -1,4 +1,5 @@
 from django.db import models
+import datetime as dt
 
 # Create your models here.
 
@@ -18,5 +19,10 @@ class Images(models.Model):
     def update_image(self):
         self.objects.update()
 
+    @classmethod
+    def get_image(cls):
+        images = cls.objects.all()
+        return images
+    
     def __str__(self):
         return self.name
