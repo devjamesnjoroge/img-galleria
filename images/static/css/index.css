@@ -5,3 +5,15 @@
     color: green;
     font-family: 'Poppins', sans-serif;
 }
+
+.img{
+    height: 30vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-footer{
+    height: 20vh;
+    overflow-y: scroll;
+}
