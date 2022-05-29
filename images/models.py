@@ -25,6 +25,11 @@ class Images(models.Model):
         return images
 
     @classmethod
+    def get_image_by_date(cls, date):
+        image = cls.objects.filter(date_taken__date=date)
+        return image
+
+    @classmethod
     def get_image_by_id(cls, id):
         image = cls.objects.get(id = id)
         return image
