@@ -28,6 +28,11 @@ class Images(models.Model):
     def get_image_by_id(cls, id):
         image = cls.objects.get(id = id)
         return image
+
+    @classmethod
+    def filter_by_location(cls, location):
+        images = cls.objects.filter(location__icontains=location)
+        return images
     
     def __str__(self):
         return self.name
