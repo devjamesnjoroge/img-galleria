@@ -1,11 +1,10 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
+
 {% block content %}
-{{block.super}}
-
-
 <div class="container">
     <div class="row">
         {% if images %}
+        <h2>Found {{ images|length }} of searched term {{message}}</h2>
         {% for image in images %}
 
         <div class="col-3">
@@ -24,7 +23,13 @@
         </div>
         
         {% endfor %}
+
+        {% else %}
+
+        <h2> {{message}}</h2>
+
         {% endif %}
+
     </div>
 </div>
 
