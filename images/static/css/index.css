@@ -1,9 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Life+Savers:wght@400;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Joti+One&display=swap');
 
 *{
     color: green;
     font-family: 'Poppins', sans-serif;
+}
+
+.index-fluid{
+    display: flex;
+    justify-content: center;
+}
+
+header{
+    width: 20%;
+    height: 100vh;
+    border: 1px solid #008080;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    flex-wrap: wrap;
+    padding-top: 5vh;
+    background: #D9D9D9;
+}
+
+header ul{
+    list-style: none;
+    margin-top: 10vh;
+}
+
+header ul li{
+    display: flex;
+    flex-direction: column;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: #008080;
+    margin: 1.5rem 0;
+}
+
+.logo{
+    font-family: 'Joti One', cursive;
+    color: #008080;
+    font-size: auto;
 }
 
 .img{
@@ -16,4 +56,38 @@
 .card-footer{
     height: 20vh;
     overflow-y: scroll;
+}
+
+main{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    max-height: 100vh;
+    padding: 0 10vw;
+    background: linear-gradient(to right, #cccccc48, #cccccc6e), url(../assets/bg.svg);
+    background-size: contain;
+    background-position: center;
+}
+
+main .container{
+    display: flex;
+    gap: 2vh;
+    flex-direction: column;
+}
+
+.eg span{
+   margin-top: 3vh;
+   color: #E1368C !important;
+}
+
+@media screen and (max-width: 600px){
+    header{
+        width: 35%;
+    }
+    main{
+        width: 65%;
+    }
 }
