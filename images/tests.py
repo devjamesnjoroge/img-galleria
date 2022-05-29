@@ -17,14 +17,5 @@ class imagesTest(TestCase):
         images = Images.objects.all()
         self.assertTrue(len(images) > 0)
 
-    #Testing Delete Method
-    def test_delete_image(self):
-        self.new_image.delete_image()
-        images = Images.objects.all()
-        self.assertTrue(len(images) == 0)
-
-    #Testing Update Method
-    def test_update_image(self):
-        self.new_image.update_image()
-        images = Images.objects.all()
-        self.assertTrue(len(images) > 0)
+    def tearDown(self):
+        Images.objects.all().delete()

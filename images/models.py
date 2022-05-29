@@ -16,7 +16,7 @@ class Images(models.Model):
         self.delete()
 
     def update_image(self):
-        self.update()
+        self.objects.update()
 
     def __str__(self):
         return self.name
