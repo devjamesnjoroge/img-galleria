@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+{{block.super}}
+<div class="index-fluid">
+    <header>
+        <h3 class="logo">IMG<span>ALLERIA</span></h3>
+        <ul>
+            <li><a href="{% url 'index'%}">Home</a></li>
+            <li><a href="{% url 'images' %}">All images</a></li>
+        </ul>
+    </header>
+    <div class="main-fluid">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-8">
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>{{image.name}}</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-body">
+                               
+                                    <div style="background-image: url({{image.image.url}});" class="img-lg"></div>
+                
+                            </div>
+                            <div class="card-footer">
+                              
+                                    <p>{{image.description}}</p>
+                                    <p>{{image.date_taken}}</p>
+                                    <p>{{image.category}}</p>
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+              
+            </div>
+        </div>
+    </div>
+{% endblock %}

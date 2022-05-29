@@ -85,11 +85,20 @@ main .container{
 
 .main-fluid{
     width: 80%;
-    max-height: 100vh;
+    height: 100vh;
     padding:  3vw;
     background: linear-gradient(to right, #cccccc48, #cccccc6e), url(../assets/bg.svg);
     background-size: contain;
     background-position: center;
+    overflow-y: scroll;
+}
+
+.img-lg{
+    height: 70vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+
 }
 
 @media screen and (max-width: 600px){

@@ -22,3 +22,10 @@ def search_results(request):
     else:
         message = "You haven't searched for any term"
         return render(request, 'search.html', {"message": message})
+
+def image(request, id):
+    try:
+        image = Images.get_image_by_id(id)
+    except:
+        raise Http404()
+    return render(request, 'image.html', {"image": image})
