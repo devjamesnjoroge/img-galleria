@@ -5,8 +5,11 @@ from .models import Images
 # Create your views here.
 
 def index(request):
+    return render(request, 'index.html')
+
+def images(request):
     images = Images.get_image()
-    return render(request, 'index.html', {"images": images})
+    return render(request, 'images.html', {"images": images})
 
 def search_results(request):
     if 'Image' in request.GET and request.GET["Image"]:

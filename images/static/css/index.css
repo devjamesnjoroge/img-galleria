@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Joti+One&display=swap');
 
-*{
-    color: green;
+*{ 
     font-family: 'Poppins', sans-serif;
+    color: #008080;
 }
 
 .index-fluid{
@@ -42,12 +42,12 @@ header ul li a{
 
 .logo{
     font-family: 'Joti One', cursive;
-    color: #008080;
+    color: palevioletred;
     font-size: auto;
 }
 
 .img{
-    height: 30vh;
+    height: 40vh;
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -80,14 +80,23 @@ main .container{
 
 .eg span{
    margin-top: 3vh;
-   color: #E1368C !important;
+   color: #008080;
+}
+
+.main-fluid{
+    width: 80%;
+    max-height: 100vh;
+    padding:  3vw;
+    background: linear-gradient(to right, #cccccc48, #cccccc6e), url(../assets/bg.svg);
+    background-size: contain;
+    background-position: center;
 }
 
 @media screen and (max-width: 600px){
     header{
         width: 35%;
     }
-    main{
+    main, .main-fluid{
         width: 65%;
     }
 }
