@@ -11,9 +11,12 @@ class Images(models.Model):
     date_taken = models.DateTimeField(auto_now_add=True)
     def save_image(self):
         self.save()
-        
+
     def delete_image(self):
         self.delete()
+
+    def update_image(self):
+        self.update()
 
     def __str__(self):
         return self.name
