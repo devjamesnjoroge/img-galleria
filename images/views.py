@@ -27,10 +27,9 @@ def search_results(request):
 def image(request, id):
     try:
         image = Images.get_image_by_id(id)
-        copy = image.copy_image()
     except:
         raise Http404()
-    return render(request, 'image.html', {"image": image, "copy": copy})
+    return render(request, 'image.html', {"image": image})
 
 def copy_image_url(request, id):
     image = Images.get_image_by_id(id)
