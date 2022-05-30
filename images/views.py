@@ -1,6 +1,7 @@
-from django.shortcuts import render
-from django.http import Http404, HttpResponse
+from django.shortcuts import redirect, render
+from django.http import Http404, HttpResponse, HttpResponseRedirect
 from .models import Images
+import pyperclip
 
 # Create your views here.
 
@@ -26,6 +27,16 @@ def search_results(request):
 def image(request, id):
     try:
         image = Images.get_image_by_id(id)
+        copy = image.copy_image()
     except:
         raise Http404()
-    return render(request, 'image.html', {"image": image})
+    return render(request, 'image.html', {"image": image, "copy": copy})
+
+def copy_image_url(request, id):
+    image = Images.get_image_by_id(id)
+    image.copy_image()
+    message = "Image URL Copied"
+    return render(request, 'image.html', {"image": image, "message": message})
+
+    
+    

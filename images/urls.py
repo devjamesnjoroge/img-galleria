@@ -9,6 +9,7 @@ urlpatterns = [
     url(r'^search/', views.search_results, name='search_results'),
     url(r'^images/$', views.images, name='images'),
     path('image/<int:id>', views.image, name='image'),
+    path('copy_image_url/<int:id>', views.copy_image_url, name='copy_image_url'),
 
 ]
 

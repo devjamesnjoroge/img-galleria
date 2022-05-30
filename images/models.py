@@ -1,6 +1,7 @@
 from django.db import models
 import datetime as dt
 from cloudinary.models import CloudinaryField
+import pyperclip
 
 
 # Create your models here.
@@ -23,7 +24,7 @@ class Images(models.Model):
 
     # Copy image to clipboard
     def copy_image(self):
-        return self.image
+        return pyperclip.copy(self.image.url)
 
     @classmethod
     def get_image(cls):
