@@ -1,44 +1,28 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="index-fluid">
+<div class="container">
+    <div class="row">
+        {% if images %}
+        <h2>Found {{ images|length }} of searched term {{message}}</h2>
+        {% for image in images %}
 
-    <header>
-
-        <h3 class="logo">IMG<span>ALLERIA</span></h3>
-
-        <ul>
-            <li><a href="{% url 'index'%}">Home</a></li>
-           <li><a href="{% url 'images' %}">All images</a></li>
-           
-        </ul>
-    
-    </header>
-
-    <div class="main-fluid">
-        <div class="container">
-            <div class="row">
-                {% if images %}
-                <h2>Found {{ images|length }} of searched term {{message}}</h2>
-                {% for image in images %}
-
-                <div class="col-sm-4">
-                    
-                    <div style="background-image: url({{image.image.url}});" class="img"></div>
-
-                </div>
+        <div class="col-sm-4">
             
-                
-                {% endfor %}
+            <div style="background-image: url({{image.image.url}});" class="img"></div>
 
-                {% else %}
-
-                <h2> {{message}}</h2>
-
-                {% endif %}
-
-            </div>
         </div>
+    
+        
+        {% endfor %}
+
+        {% else %}
+
+        <h2> {{message}}</h2>
+
+        {% endif %}
+
     </div>
+</div>
 
 {% endblock %}

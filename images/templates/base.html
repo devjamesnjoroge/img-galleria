@@ -14,9 +14,20 @@
 </head>
 <body>
 
+    <div class="index-fluid">
+        <header>
+            <h3 class="logo">IMG<span>ALLERIA</span></h3>
+            <ul>
+                <li><a href="{% url 'index'%}">Home</a></li>
+                <li><a href="{% url 'images' %}">All images</a></li>
+            </ul>
+        </header>
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+    </div>
 
-    {% block content %}
-    {% endblock %}
 
     {% block scripts %}
 

@@ -58,21 +58,18 @@ header ul li a{
     overflow-y: scroll;
 }
 
-main{
+.main-fluid{
     width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     flex-direction: column;
-    max-height: 100vh;
-    padding: 0 10vw;
-    background: linear-gradient(to right, #cccccc48, #cccccc6e), url(../assets/bg.svg);
-    background-size: contain;
-    background-position: center;
+    height: 80vh;
+    padding-left: 15%;
 }
 
-main .container{
+.main-fluid .container{
     display: flex;
     gap: 2vh;
     flex-direction: column;
@@ -83,7 +80,7 @@ main .container{
    color: #008080;
 }
 
-.main-fluid{
+main{
     width: 80%;
     height: 100vh;
     padding:  3vw;
